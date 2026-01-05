@@ -1,0 +1,19 @@
+@PACKAGE_INIT@
+
+# openpsd CMake config file
+# This file is generated during installation and allows projects to find
+# and link against openpsd using find_package(openpsd)
+
+# Include the targets
+include("${CMAKE_CURRENT_LIST_DIR}/openpsdTargets.cmake")
+
+# When using the shared library, define PSD_SHARED_LIB in consuming projects
+if(TARGET openpsd AND NOT TARGET openpsd::openpsd)
+    add_library(openpsd::openpsd ALIAS openpsd)
+endif()
+
+# For shared library users, set the import definition
+get_target_property(OPENPSD_TYPE openpsd TYPE)
+if(OPENPSD_TYPE STREQUAL "SHARED_LIBRARY")
+    target_compile_definitions(openpsd INTERFACE PSD_SHARED_LIB)
+endif()
