@@ -1,4 +1,4 @@
-# OpenPSD - Pure C Photoshop File Parser Library
+# OpenPSD
 
 A cross-platform, C library for reading Photoshop PSD and PSB (Large Document Format) files.
 Fully compliant with the current Adobe Photoshop File Format Specification. This library is designed to be easy to use and understand, with a focus on performance and portability.
@@ -20,7 +20,7 @@ It currently has full support for reading layers like pixel and text layers, whi
   - Layer groups (folders)
   - Layer type/features detection (group/text/smart object/adjustment/fill/effects/3D/video/empty)
   - Background layer detection (`psd_document_is_background_layer`)
-- Text layers (phase-1 API):
+- Text layers:
   - On-demand extraction of text content and style (font/size/color/tracking/leading/justification)
   - Transform matrix and bounds
 - Compression support:
@@ -85,7 +85,7 @@ cmake --install .
 
 See [API_USAGE](API_USAGE.md) for simple usage examples and a list of public API functions.
 
-See [demo](demo/psd_viewer.c) for a simple example of how to use the library.
+See [demo](demo/psd_viewer.c) for a for advanced example with rendering and layer information.
 
 ## Tests
 

@@ -382,7 +382,7 @@ psd_document_get_layer_descriptor(doc, layer_index, &desc, &desc_len);
 
 ---
 
-## Text layer API (phase 1)
+## Text layer
 
 ### `psd_text_layer_get_text`
 
